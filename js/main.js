@@ -2,11 +2,12 @@
 	
 	'use strict';
 
-	var mobileMenuOutsideClick = function() {
+	var mobileMenuOutsideClick = function() {  // also for click on menu entry
 
 		$(document).click(function (e) {
 	    var container = $("#fh5co-offcanvas, .js-fh5co-nav-toggle");
-	    if (!container.is(e.target) && container.has(e.target).length === 0) {
+
+	    if (!container.is(e.target)) {
 
 	    	if ( $('body').hasClass('offcanvas') ) {
 
